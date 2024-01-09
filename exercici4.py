@@ -1,0 +1,7 @@
+print("Introduce 2 valores")
+primero = input()
+print(f"Primer valor:  {primero}")
+segundo = input()
+print(f"Segundo valor: {segundo}")
+suma = int(primero) + int(segundo)
+print(f"El resultado de la operación es: {suma}")
