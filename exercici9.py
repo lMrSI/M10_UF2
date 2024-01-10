@@ -1,0 +1,5 @@
+print("Introduce dos palabras: ")
+primeraPalabra = input()
+segundaPalabra = input()
+print(primeraPalabra.replace(primeraPalabra[:2], segundaPalabra[:2]))
+print(segundaPalabra.replace(segundaPalabra[:2], primeraPalabra[:2]))
