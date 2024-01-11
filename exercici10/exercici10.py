@@ -1,18 +1,25 @@
+
 import random
 
+
+numeroAleatorio = random.randrange(101)
+
 with open("exercici10/archvivo.txt", "w") as archivo:
-        numeroAleatorio = random.randrange(100)
-        archivo.write(f"{numeroAleatorio}")
-        count = 0
-        print("Introduce un número: ")
+    archivo.write(f"{numeroAleatorio}")
+
+count = 1
+
+print("Introduce un número: ")
+numero = input()
+
+while int(numero) != numeroAleatorio:
+    
+    if int(numero) > numeroAleatorio:
+        print("El número es más pequeño, inténtalo nuevamente")
         numero = input()
-        while int(numero) == numeroAleatorio:
-                if(int(numero) > numeroAleatorio):
-                        print("El número es mas grande")
-                        numero = input()
-                        count += 1
-                else:
-                        print("El número es mas pequeño")
-                        numero = input()
-                        count += 1
-        print(f"numero acertado: {numero}, el total de intentos fue: {count}")
+        count += 1
+    else:
+        print("El número es más grande, inténtalo nuevamente")
+        numero = input()
+        count += 1
+print(f"Número acertado: {numero}, el total de intentos fue: {count}")
