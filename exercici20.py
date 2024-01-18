@@ -1,14 +1,23 @@
-dict = {}
-print("Ingrese nombres y edades: ")
-numero = input()
-while  int(numero) != 0:
-    print("Ingrese la nombre: ")
-    nombre = input()
-    if(dict.values(nombre) == True):
-        print("El nombre ya existe, ingrese otro distinto")
-    print("Ingrese la edad: ")
-    edad = input()
-    dict[nombre] = edad
+diccionario = {}
 
-    print(dict)
-    numero = input()
+print("Ingrese nombres y edades. Ingrese 0 para dejar de agregar contactos.")
+
+while True:
+    try:
+        numero = int(input("Ingrese 0 para dejar de agregar contactos, o cualquier otro número para continuar:"))
+        if numero == 0:
+            break 
+
+        nombre = input("Ingrese el nombre: ")
+        
+        if nombre in diccionario:
+            print("El nombre ya existe en el diccionario. Ingrese otro nombre.")
+        else:
+            edad = int(input("Ingrese la edad: "))
+            diccionario[nombre] = edad
+            print("Diccionario:", diccionario)
+
+    except ValueError:
+        print("¡Error! Ingrese un número válido.")
+
+print("Diccionario final:", diccionario)
