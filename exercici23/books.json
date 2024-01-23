@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "title": "Harry Potter",
+      "cover": "Bloomsbury.jpg",
+      "year": 1991,
+      "pages": 309
+    },
+    {
+      "title": "Noches Blancas",
+      "cover": "R\u00fastica.jpg",
+      "year": 1848,
+      "pages": 84
+    },
+    {
+      "title": "Delirium",
+      "cover": "Portlan.jpg",
+      "year": 2011,
+      "pages": 445
+    },
+    {
+      "title": "Crimen y Castigo",
+      "cover": "R\u00fastica.jpg",
+      "year": 1866,
+      "pages": 948
+    }
+  ]
+}
