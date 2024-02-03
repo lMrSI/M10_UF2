@@ -1,33 +1,16 @@
 import psycopg2
 
-class DataBaseConnection:
-    def __init__(self, database, user, password, host, port):
-        self.connection = psycopg2.connect(
-            database = database,
-            user = user,
-            password = password,
-            host = host,
-            port = port
-        )
-        self.cursor = self.connection.cursor()
+conn = psycopg2.connect(
+    database="postgres",
+    user='user_postgres',
+    password='pass_postgres',
+    host='localhost',
+    port='5432'
+)
 
-    def execute(self, sql):
-        self.cursor.execute(sql)
+cursor = conn.cursor()
 
-    def commit(self):
-        self.connection.commit()
+#print(connection)
 
-    def close(self):
-        self.cursor.close()
-        self.connection.close()
-
-    def get_connection():
-        return DataBaseConnection(
-            database="postgres",
-            user='user_postgres',
-            password='pass_postgres',
-            host='localhost',
-            port='5432'
-        )
 
 

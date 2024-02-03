@@ -1,12 +1,8 @@
-import psycopg2
-import connection
+import connection as conn
 
-def create():
-    sql = '''CREATE TABLE SERIES(
-                    id SERIAL PRIMARY KEY,
-                    nombre VARCHAR(255) NOT NULL,
-                    temporadas INT NOT NULL,
-                    capitulos INT NOT NULL,
-                    puntuacion FLOAT NOT NULL
-    )'''
-    print(sql)
+def insert():
+    sql_insert = '''  INSERT INTO public.peliculas(id, titulo, año, director, pais, puntuacion)
+                                  VALUES('1', 'Oppenheimer', '2023', 'Christopher Nolan', 'Estados Unidos', 5.0)
+    '''
+    conn.cursor.execute(sql_insert)
+    conn.conn.commit()
